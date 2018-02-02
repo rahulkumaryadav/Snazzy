@@ -1,0 +1,285 @@
+
+
+
+<form name="form" ng-submit="addPassenger(passenger)">
+    <div class="container-fluid mainouter">
+        <div class="main-inner">
+            <div id="list">
+                <div class="header "> PASSENGER DETAILS FORM
+                </div>
+                <div class="traveldetails-outer">
+                    <div class="sectioncontainer createfrm">
+
+                        <div class="row">
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Source Name <span class="redcolor"> *</span></label>
+                                <input class="input inputTypeText col-md-12" type="text" name="source"  id="source" value="SLPL" readonly required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>First Name <span class="redcolor"> *</span></label>
+                                <input class="input inputTypeText col-md-12" type="text" name="firstName" id="firstName"
+                                       ng-model="passenger.firstName" required>
+                            </div>
+
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Middle Name <span class="redcolor"> *</span></label>
+                                <div class="iconrelative">
+                                    <input text-only class="input inputTypeText col-md-12" type="text" name="middleName"
+                                           id="middleName" ng-model="passenger.middleName" required>
+                                </div>
+                            </div>
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Last Name </label>
+                                <div class="iconrelative">
+                                    <input type="textarea" class="input inputTypeText col-md-12" name="lastName"
+                                           id="lastName" ng-model="passenger.lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Nationality</label>
+                                <div class="iconrelative">
+                                    <select id="nationality" ng-model="passenger.nationality"
+                                            class="input inputTypeText col-md-12" required>
+                                        <option value="">--Please Select--</option>
+                                        <option value="Indian">Indian</option>
+                                        <option value="Pakistani">Pakistani</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Gender</label>
+                                <select class="input inputTypeText col-md-12" ng-model="passenger.gender" required>
+                                    <option value="">--Please Select--</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Date of Birth<span class="redcolor"> *</span></label>
+                                <input class="input inputTypeText col-md-12" type="date" name="dateOfBirth"
+                                       id="dateOfBirth" ng-model="passenger.dateOfBirth" required>
+                            </div>
+
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Age<span class="redcolor"> *</span></label>
+                                <input class="input inputTypeText col-md-12" type="number" name="age" id="age"
+                                       ng-model="passenger.age" required>
+                            </div>
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Passport Number</label>
+                                <div class="iconrelative">
+                                    <input type="text" class="input inputTypeText col-md-12" name="passportNumber"
+                                           id="passportNumber" ng-model="passenger.passportNumber" required>
+                                </div>
+                            </div>
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Passport Issue Date</label>
+                                <div class="iconrelative">
+                                    <input type="date" class="input inputTypeText col-md-12" name="passportIssueDate"
+                                           id="passportIssueDate" ng-model="passenger.passportIssueDate" required>
+                                </div>
+                            </div>
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Passport Expiry Date</label>
+                                <input type="date" class="input inputTypeText col-md-12" id="passportExpiryDate"
+                                       name="passportExpiryDate" ng-model="passenger.passportExpiryDate" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Ejaamat Id<span class="redcolor"> *</span></label>
+                                <div class="iconrelative">
+                                    <input type="text" class="input inputTypeText col-md-12" ng-model="passenger.ejaamatId" required>
+                                    <!--<select class="input inputTypeText col-md-12" ng-model="passenger.ejaamatId" required>
+                                        <option selected="trueSLPL" disabled="true" value="">Choose Category</option>
+                                        <option value="Association of Persons (AOP)">Association of Persons (AOP)
+                                        </option>
+                                        <option value="Body of Individuals (BOI)">Body of Individuals (BOI)</option>
+                                        <option value="Company">Company</option>
+                                        <option value="Firm">Firm</option>
+                                        <option value="Government">Government</option>
+                                        <option value="HUF (Hindu Undivided Family)">HUF (Hindu Undivided Family)
+                                        </option>
+                                        <option value="Local Authority">Local Authority</option>
+                                        <option value="Artificial Juridical Person">Artificial Juridical Person</option>
+                                        <option value="Individual">Individual</option>
+                                        <option value="Trust(AOP)">Trust(AOP)</option>
+                                        <option value="Krish (Trust Krish)">Krish (Trust Krish)</option>
+                                    </select>-->
+                                </div>
+                            </div>
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>PAN Number<span class="redcolor"> *</span></label>
+                                <div class="iconrelative">
+                                    <input type="text" class="input inputTypeText col-md-12" name="panCardNumber"
+                                           id="panCardNumber" ng-model="passenger.panCardNumber" required>
+                                </div>
+                            </div>
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Mobile Number</label>
+                                <div class="iconrelative">
+                                    <input type="number" class="input inputTypeText col-md-12" name="mobile" id="mobile"
+                                           ng-model="passenger.mobile" required>
+                                </div>
+                            </div>
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Landline Number</label>
+                                <div class="iconrelative">
+                                    <input type="text" class="input inputTypeText col-md-12" name="officeLandline"
+                                           id="officeLandline" ng-model="passenger.landLine">
+                                </div>
+                            </div>
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Address</label>
+                                <div class="iconrelative">
+                                    <textarea class="input inputTypeText col-md-12" id="address" name="address"
+                                              ng-model="passenger.address" required></textarea>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Email <span class="redcolor"> *</span></label>
+                                <input class="input inputTypeText col-md-12 " type="text" ng-model="passenger.email">
+                            </div>
+
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Class of Travel <span class="redcolor"> *</span></label>
+                                <select class="input inputTypeText col-md-12" name="requestedClass" id="requestedClass"
+                                        ng-model="passenger.requestedClass" required>
+                                    <option value="">--Please Select--</option>
+                                    <option value="Economy Class"> Economy Class</option>
+                                    <option value="Premium Economy Class"> Premium Economy Class</option>
+                                    <option value="Business Class"> Business Class</option>
+                                    <option value="First Class"> First Class</option>
+                                </select>
+                            </div>
+
+
+                            <div class="form-group-custmize col-md-3 col-xs-12" ng-if="atleastOneAdded">
+                                <label>Infant <span class="redcolor"> *</span></label>
+                                <select class="input inputTypeText col-md-12" ng-it="passenger.infant='NO'" ng-model="passenger.infant">
+                                    <option value="">--Please Select--</option>
+                                    <option value="NO" selectedS> NO</option><!--selectedS-->
+                                    <option value="YES"> YES</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group-custmize col-md-3 col-xs-12" ng-if="passenger.infant=='YES'">
+                                <label>Accompanied By<span class="redcolor"> *</span></label>
+                                <input class="input inputTypeText col-md-12" type="text"
+                                       ng-model="passenger.accompaniedBy" required>
+                            </div>
+                            <div class="form-group-custmize col-md-3 col-xs-12">
+                                <label>Meal Preference<span class="redcolor"> *</span></label>
+                                <div class="row col-md-12">
+                                    <label class="radio-inline"><input type="radio" ng-model="passenger.requestedMealType" value="veg" name="optradio" required>Veg</label>
+                                    <label class="radio-inline"><input type="radio" ng-model="passenger.requestedMealType" value='nonVeg'name="optradio" required>Non Veg</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-4">
+                                <div class="specialrequest">
+                                    <ul class="list-inline">
+                                        <li>special Request</li>
+                                        <li><input type="checkbox" ng-model="passenger.wheelchairRequest" name="vehicle">Wheelchair</li>
+                                        <li><input type="checkbox" ng-model="passenger.bassinetSeatRequest" name="vehicle">Bassinet seat</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <input type="submit" class="customdarkbluebtn tabmargin" value="ADD">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!--<p class="note">Please note request is purely subject to availability </p>-->
+                                <div class="alert alert-warning">
+                                    <strong>Please note</strong> Request is purely subject to availability.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="alert alert-danger">
+                                    <strong>Alert!</strong> Do Not Refresh the Page otherwise records in the list will be lost.
+                                </div>
+                                <!--<p class="note text-right">Do not Refresh otherwise data will be lost </p>-->
+                            </div>
+                        </div>
+
+                        <div class="table-responsive porttarrricut-table">
+                            <div class="table table-hover table-bordered customtable-nowidth  table-odd-even"
+                                 style="text-transform:capitalize;" id="shippersRcvers">
+                                <ul>
+                                    <li>First Name</li>
+                                    <li>Middle Name</li>
+                                    <li>Last Name</li>
+                                    <li>Nationality</li>
+                                    <li>Gender</li>
+                                    <li>Date of Birth</li>
+                                    <li>Age</li>
+                                    <li>Passport Number</li>
+                                    <li>Passport Issue Date</li>
+                                    <li>Passport Expiry Date</li>
+                                    <li>Ejaamat Id</li>
+                                    <li>PAN Number</li>
+                                    <li>Mobile Number</li>
+                                    <li>Landline Number</li>
+                                    <li>Address</li>
+                                    <li>Email</li>
+                                    <li>Infant</li>
+                                    <li>Accompanied By</li>
+                                    <li class="action">Delete</li>
+                                </ul>
+
+                                <ul ng-repeat="passengerData in jsondata.passengerList">
+                                    <li>{{passengerData.firstName}}</li>
+                                    <li>{{passengerData.middleName}}</li>
+                                    <li>{{passengerData.lastName}}</li>
+                                    <li>{{passengerData.nationality}}</li>
+                                    <li>{{passengerData.gender}}</li>
+                                    <li>{{passengerData.dateOfBirth | date:"dd/MM/yyyy"}}</li>
+                                    <li>{{passengerData.age}}</li>
+                                    <li>{{passengerData.passportNumber}}</li>
+                                    <li>{{passengerData.passportIssueDate | date:"dd/MM/yyyy"}}</li>
+                                    <li>{{passengerData.passportExpiryDate | date:"dd/MM/yyyy"}}</li>
+                                    <li>{{passengerData.ejaamatId}}</li>
+                                    <li>{{passengerData.panCardNumber}}</li>
+                                    <li>{{passengerData.mobile}}</li>
+                                    <li>{{passengerData.landLine}}</li>
+                                    <li>{{passengerData.address}}</li>
+                                    <li>{{passengerData.email}}</li>
+                                    <li>{{passengerData.infant}}</li>
+                                    <li>{{passengerData.accompaniedBy}}</li>
+                                    <li class="text-center">
+                                        <i class="fa fa-trash-o" aria-hidden="true"ng-click=" deletePassenger($index)" ></i>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 tabmargin">
+                                <a  class="customdarkbluebtn pull-right btnmargbottmright"><i class="fa fa-times" aria-hidden="true"></i> Cancel</a>
+                                <a data-ng-click="savePassenger()" class="customdarkbluebtn pull-right"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+

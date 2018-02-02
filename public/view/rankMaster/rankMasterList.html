@@ -1,0 +1,121 @@
+<h3> Rank </h3><br>
+
+<div id="list" >
+    <div class="header serchouter"> Rank Master
+        <div class="searchcontrol floatright">
+            <input id="searchRankName" name="searchRankName" placeholder="Type rank name to search" ng-model="search.strRankName" class=" form-control inputTypeText"/>
+            <div class="serchbtn"><i class="fa fa-search" aria-hidden="true"></i></div>
+        </div>
+        <a href="#addModal" ng-click="addModal()" data-toggle="modal" class="btn btn-primary pull-right newbtn" ><i class="fa fa-plus"></i> New Entry </a>
+    </div>
+
+    <div class="table table-hover table-bordered customtable sectioncontainer twocolumntable-action">
+        <ul>
+            <li> Rank Name </li>
+            <li class="action"> Actions </li>
+        </ul>
+        <ul dir-paginate="element in rankList | filter:search:strict | itemsPerPage: 10">
+            <li >{{element.strRankName}}</li>
+            <li class="action">
+                <a href="#updateModal" ng-click="updateModal(element)" data-toggle="modal" class="fa fa-pencil"> </a>
+                <a href="#deleteModal" ng-click="deleteModal(element)" data-toggle="modal" class="fa fa-trash-o"> </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="text-center">
+        <dir-pagination-controls boundary-links="true" direction-links="true">
+        </dir-pagination-controls>
+    </div>
+
+    <div class="modal fade pg-show-modal" id="addModal" tabindex="-1" role="dialog" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal_width">
+            <div class="modal-content modal_design">
+                <div class="modal-header modal-header-bg">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h2 class="modal-title"><span class="glyphicon glyphicon-plus-sign"></span> Create Rank </h2>
+                </div>
+                <div class="succesmsgfile alert " ng-class="{'btn-danger': status == 'Error! Unable to save.' , 'alert-success': status == 'Saved.'}">
+                    {{status}}
+                </div>
+                <form ng-submit="save(rank ,form)" name="form" ng-validate="validationOptions" >
+                    <div class="modal-body">
+                        <div class="row space">
+                            <div class="col-md-12">
+                                <div class="control-label">
+                                    <label for="strRankName"> Rank Name </label>
+                                    <input class="form-control" type="text" name="strRankName" id="strRankName" ng-model="rank.strRankName" casetransform="toUpper"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="save" class="btn btn-info"  aria-hidden="true"><i class="glyphicon glyphicon-save"></i> Save </button>
+                        <a data-dismiss="modal" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i> Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade pg-show-modal" id="updateModal" tabindex="-1" role="dialog" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal_width">
+            <div class="modal-content modal_design">
+                <div class="modal-header modal-header-bg">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h2 class="modal-title"><span class="glyphicon glyphicon-plus-sign"></span> Update Rank </h2>
+                </div>
+                <div class="succesmsgfile alert " ng-class="{'btn-danger': status == 'Error! Unable to save.' , 'alert-success': status == 'Saved.'}">
+                    {{status}}
+                </div>
+                <form ng-submit="updateSave(rank ,form)" name="form" ng-validate="validationOptions">
+                    <div class="modal-body">
+                        <div class="row space">
+                            <div class="col-md-12">
+                                <div class="control-label">
+                                    <label for="strRankName"> Rank Name </label>
+                                    <input class="form-control" type="text" name="strRankName" ng-model="rank.strRankName" casetransform="toUpper"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="updateSave" class="btn btn-info"  aria-hidden="true"><i class="glyphicon glyphicon-save"></i> Update </button>
+                        <a data-dismiss="modal" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i> Cancel </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade pg-show-modal" id="deleteModal" tabindex="-1" role="dialog" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal_width">
+            <div class="modal-content modal_design">
+                <div class="modal-header modal-header-bg">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h2 class="modal-title"><span class="glyphicon glyphicon-trash"></span> Delete Rank </h2>
+                </div>
+                <div class="succesmsgfile alert " ng-class="{'btn-danger': status == 'Error! Unable to save.' , 'alert-success': status == 'Saved.'}">
+                    {{status}}
+                </div>
+                <form ng-submit="deleteSave(rank)">
+                    <div class="modal-body">
+                        <div class="row space center">
+                            <div class="col-md-12">
+                                <div class="control-label">
+                                    <label > Are uou sure you wants to delete rank '{{rank.strRankName}}'? </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="deleteSave" class="btn btn-danger"  aria-hidden="true"><i class="glyphicon glyphicon-trash"></i> Confirm </button>
+                        <a data-dismiss="modal" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i> Cancel </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>

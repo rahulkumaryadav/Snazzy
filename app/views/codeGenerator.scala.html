@@ -1,0 +1,91 @@
+@(user: STPL_USER)
+
+@main("fashion-Login", user) {
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    <script src="@routes.Assets.at("javascripts/dirPagination.js")"></script>
+
+
+    <script src="@routes.Assets.at("js/codeGeneratorApp.js")"></script>
+
+
+    <div ng-controller="codeGeneratorCtrl">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+        <body>
+            <form class="codeEntry" ng-submit="save(data)" >
+
+                <div class="row" >
+                    <div class="form-group-custmize col-md-3 col-xs-12">
+                        <label>Item Description <span class="redcolor"> *</span></label>
+                        <input class="input inputTypeText col-md-9" type="text" name="strItemDescription" id="strItemDescription"
+                        ng-model="data.strItemDescription" required>
+                    </div>
+                    <div class="form-group-custmize col-md-3 col-xs-12">
+                        <label>Code <span class="redcolor"> *</span></label>
+                        <div class="iconrelative">
+                            <input text-only class="input inputTypeText col-md-9" type="text" name="strCode"
+                            id="middleName" ng-model="data.strCode" required>
+                        </div>
+                    </div>
+                    <div class="form-group-custmize col-md-2 col-xs-12">
+                        <label>Purchase Price <span class="redcolor"> *</span></label>
+                        <input class="input inputTypeText col-md-9" type="text" name="strPurchesRate" id="strPurchesRate"
+                        ng-model="data.strPurchesRate" required>
+                    </div>
+                    <div class="form-group-custmize col-md-2 col-xs-12">
+                        <label>Selling Price </label>
+                        <div class="iconrelative">
+                            <input type="textarea" class="input inputTypeText col-md-9" name="strSalingRate"
+                            id="lastName" ng-model="data.strSalingRate" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label></label>
+                        <button type="submit" class="btn btn-primary logsubmit-btn" >save</button>
+
+                    </div>
+                </div>
+
+
+            </form>
+            <form>
+                <table class="table table-hover table-bordered" bs-table>
+                    <thead>
+                        <tr>
+                            <th ng-click="predicate='ItemDescription'; reverse=!reverse">Item Description</th>
+                            <th ng-click="predicate='Code'; reverse=!reverse">Code</th>
+                            <th ng-click="predicate='PurchasePrice'; reverse=!reverse">Purchase Price</th>
+                            <th ng-click="predicate='SellingPrice'; reverse=!reverse">Selling Price</th>
+                           @* <th ng-click="predicate='LastName'; reverse=!reverse">Unique Code</th>*@
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr  dir-paginate="codeGenerator in codeGeneratorList | filter:search:strict | itemsPerPage: 10">
+                            <td>{{ codeGenerator.strItemDescription }}</td>
+                            <td>{{ codeGenerator.strCode }}</td>
+                            <td>{{ codeGenerator.strPurchesRate }}</td>
+                            <td>{{ codeGenerator.strSalingRate }}</td>
+                            <td class="action-column">
+@*
+                                <button type="button" class="btn btn-info btn-sm" ng-click="Edit(contact)">Edit</button>
+*@
+                                <button type="button" class="btn btn-info btn-sm" ng-click="delete(codeGenerator)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <dir-pagination-controls boundary-links="true" direction-links="true">
+                    </dir-pagination-controls>
+                </div>
+            </form>
+        </body>
+    </div>
+}

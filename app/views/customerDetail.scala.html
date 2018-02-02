@@ -1,0 +1,284 @@
+
+@(user:STPL_USER)
+@main("customerDetail",user) {
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    <script src="@routes.Assets.at("javascripts/dirPagination.js")"></script>
+    <script src="@routes.Assets.at("javascripts/angucomplete-alt.js")"></script>
+    <script src="@routes.Assets.at("js/customerDetailApp.js")"></script>
+    <div  ng-controller="customerDetailCtrl">
+        <ui-view>
+            <button class="btn success">Code Generator</button>
+            <button class="btn success">Customer Detail</button>
+            <form  name="form" ng-submit="add(newCustomerData)">
+                <div class="container-fluid mainouter">
+                    <div class="row" style="background-color:#213098 " >
+                        <div class="headerOfInvoice "> INVOICE GENERATION FORM
+                        </div>
+                    </div>
+                    <div class="main-inner">
+                        <div id="list">
+                            <div class="traveldetails-outer">
+                                <div class="sectioncontainer createfrm">
+                                    <div class="row">
+                                        @*<div class="form-group-custmize col-md-3 col-xs-12">
+                                            <label>Unique Key <span class="redcolor"> *</span></label>
+                                            <input class="input inputTypeText col-md-12" type="text" name="firstName" id="firstName"
+                                            ng-model="passenger.firstName" required>
+                                        </div>*@
+                                      @*  <div class="form-group-custmize col-md-3 col-xs-12">
+                                            <label>Purchase  Item </label>
+                                            <select ng-model="newCustomerData.item" class="input inputTypeText ">
+                                                <option value="USD">Tshirt</option>
+                                                <option value="INR">Shirt</option>
+                                            </select>
+                                        </div>*@
+                                       @* <div class="form-group-custmize col-md-2 col-xs-12">
+                                            <label>Purchase Item </label>
+                                           *@@* <div class="iconrelative">
+                                                <input type="textarea" class="input inputTypeText col-md-12" name="strSalingRate" id="strSalingRate" ng-model="newCustomerData.originalObject.strSalingRate" required>
+                                            </div>*@@*
+                                            <select ng-model="newCustomerData.originalObject.item" class="input inputTypeText ">
+                                                <option value="">Please Select</option>
+                                                <option value="Tshirt">Tshirt</option>
+                                                <option value="Shirt">Shirt</option>
+                                            </select>
+                                        </div>*@
+
+
+                                        <div class="form-group-custmize col-md-3 col-xs-12">
+                                            <label>Enter Unique Code </label>
+                                            <div angucomplete-alt id="ex16"
+                                            placeholder="Search  Code"
+                                            maxlength="50"
+                                            pause="100"
+                                            selected-object="newCustomerData"
+                                            initial-value="newCustomerData"
+                                            local-data="codeGeneratorList"
+                                            search-fields="strCode"
+                                            title-field="strCode"
+                                            minlength="1"
+                                            input-class="form-control form-control-small"
+                                            match-class="highlight">
+                                            </div>
+                                        </div>
+
+                                       @* <div class="result">
+                                            <label><small>This should change the input</small></label>
+                                            <button class="btn btn-blue btn-slim" ng-click="changeInput('ex16')">Change #ex16</button>
+                                        </div>*@
+                                        <div class="form-group-custmize col-md-2 col-xs-12">
+                                            <div >
+                                                <label>Item Description  :<span class="bold-span">{{newCustomerData.originalObject.strItemDescription}}</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group-custmize col-md-2 col-xs-12">
+                                            <div >
+                                                <label>Purchase Price :<span class="bold-span">{{newCustomerData.originalObject.strPurchesRate}}</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group-custmize col-md-2 col-xs-12">
+                                            <label>Selling Price </label>
+                                            <div class="iconrelative">
+                                                <input type="textarea" class="input inputTypeText col-md-12" name="strSalingRate" id="strSalingRate" ng-model="newCustomerData.originalObject.strSalingRate" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group-custmize col-md-1 col-xs-12">
+                                            <label>Quantity </label>
+                                            <div class="iconrelative">
+                                                <input type="textarea" class="input inputTypeText col-md-12" name="quantity" id="quantity" ng-model="newCustomerData.quantity" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group-custmize col-md-2 col-xs-12">
+
+
+                                            <div class="iconrelative">
+                                                <button type="submit" class="btn btn-primary logsubmit-btn" >Add</button>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                       @* <div class="form-group col-md-3">
+                                            <label>Search Unique Code</label>
+                                            <angucomplete  id="codeGeneratorList" placeholder="Search Unique Code" pause="100" local-search="codeNameSearch" selectedobject="newCustomerData.strUniqueCode" localdata="codeGeneratorList" searchfields="strUniqueCode" titlefield="strUniqueCode" minlength="1" inputclass="input inputTypeText" matchclass="highlight" />
+                                            <input ng-model="newCustomerData.strUniqueCode.originalObject" getporthsprofile class="displaynone" >
+                                        </div>*@
+
+
+@*
+                                        <div class="form-group-custmize col-md-3 col-xs-12">
+                                            <label>Purchase Price <span class="redcolor"> *</span></label>
+                                            <div class="iconrelative">
+                                                <input text-only class="input inputTypeText col-md-12" type="text" name="middleName"
+                                                id="middleName" ng-model="passenger.middleName" required>
+                                            </div>
+                                        </div>*@
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </form>
+
+            <form  name="form" >
+                <table class="table table-hover table-bordered" bs-table>
+                    <thead>
+                        <tr>
+                            <th ng-click="predicate='LastName'; reverse=!reverse"> Code</th>
+                            <th ng-click="predicate='FirstName'; reverse=!reverse"> Item Description</th>
+                            <th ng-click="predicate='FirstName'; reverse=!reverse">Selling Price</th>
+                            <th ng-click="predicate='FirstName'; reverse=!reverse">Quantity</th>
+                            <th ng-click="predicate='FirstName'; reverse=!reverse">Total</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="invoice in singleInvoiceDataList | orderBy:predicate:reverse">
+                            <td>{{ invoice.strCode }}</td>
+                            <td>{{ invoice.strItemDescription }}</td>
+                            <td>{{ invoice.strSalingRate }}</td>
+                            <td>{{ invoice.quantity }}</td>
+                            <td>{{ invoice.total }}</td>
+                            <td class="action-column">
+                                <button type="button" class="btn btn-info btn-sm" ng-click="removeFromList(invoice)">Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="iconrelative">
+                    <button type="submit" data-ng-click="save(singleInvoiceDataList)"  class="btn btn-primary logsubmit-btn" >Save</button>
+                    @*<button type="submit" data-ng-click="getByInvoiceNo(invoiceNo)" onclick="location.href='//localhost:9000'">  class="btn btn-primary logsubmit-btn" >Generate Invoice</button>*@
+@*
+                    <a  data-ng-click="getByInvoiceNo(invoiceNo)" class="btn btn-primary logsubmit-btn" type="submit" data-ng-click="getByInvoiceNo(invoiceNo)">Generate Invoice</a>
+*@
+
+                </div>
+            </form>
+            <form id="form1" runat="server" style="background-color:#ffffff;display: none" >
+                <div id="printablediv">
+                    <header>
+                        <div   align="center">
+                            <h1 >Invoice</h1>
+                        </div>
+                        @*
+                        <span><img alt="" src="http://www.jonathantneal.com/examples/invoice/logo.png"><input type="file" accept="image/*"></span>
+                        *@
+                        <img src="@routes.Assets.at("/images/SnazzyJ_logo.jpg")" alt="Girl in a jacket" align="right" style="width:300px;height:100px;">
+
+
+                        <address contenteditable>
+                            <p>Rohan Chande</p>
+                            <p>Mulund (West)<br>Mumbai, 400037</p>
+                            <p>Mob: 8080405151</p>
+                            <p>Mob: 8080405151</p>
+                        </address>
+                    </header>
+                    <div class="row">
+                        <article>
+                            <h1>Recipient</h1>
+                            <address contenteditable>
+                                <p>Some Company<br>c/o Some Guy</p>
+                            </address>
+                            <table border="1" align="right" class="meta">
+                                <tr>
+                                    <th><span contenteditable>Invoice #</span></th>
+                                    <td><span contenteditable>101138</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span contenteditable>Date</span></th>
+                                    <td><span contenteditable>January 1, 2012</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span contenteditable>Amount Due</span></th>
+                                    <td><span id="prefix" contenteditable>$</span><span>600.00</span></td>
+                                </tr>
+                            </table>
+
+                            <table style="width: 720px" border="1">
+                                <thead>
+                                    <tr>
+                                        <th ng-click="predicate='FirstName'; reverse=!reverse">Purchase Item</th>
+                                        <th ng-click="predicate='LastName'; reverse=!reverse">Unique Code</th>
+                                        <th ng-click="predicate='FirstName'; reverse=!reverse">Selling Price</th>
+                                        <th ng-click="predicate='FirstName'; reverse=!reverse">Quantity</th>
+                                        <th ng-click="predicate='FirstName'; reverse=!reverse">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="invoice in printInvoiceList | orderBy:predicate:reverse">
+                                        <td>{{invoice.item}}</td>
+                                        <td>{{ invoice.strUniqueCode }}</td>
+                                        <td>{{ invoice.strSalingRate }}</td>
+                                        <td>{{ invoice.quantity }}</td>
+                                        <td>{{ invoice.total }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            @*
+                            <table class="inventory">
+                            <thead>
+                            <tr>
+                            <th><span contenteditable>Item</span></th>
+                            <th><span contenteditable>Description</span></th>
+                            <th><span contenteditable>Rate</span></th>
+                            <th><span contenteditable>Quantity</span></th>
+                            <th><span contenteditable>Price</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td><a class="cut">-</a><span contenteditable>Front End Consultation</span></td>
+                            <td><span contenteditable>Experience Review</span></td>
+                            <td><span data-prefix>$</span><span contenteditable>150.00</span></td>
+                            <td><span contenteditable>4</span></td>
+                            <td><span data-prefix>$</span><span>600.00</span></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            *@
+                            @*<a class="add">+</a>*@
+                            <table class="balance" border="1" align="right">
+                                <tr>
+                                    <th><span contenteditable>Total</span></th>
+                                    <td><span data-prefix>$</span><span>600.00</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span contenteditable>Amount Paid</span></th>
+                                    <td><span data-prefix>$</span><span contenteditable>0.00</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span contenteditable>Balance Due</span></th>
+                                    <td><span data-prefix>$</span><span>600.00</span></td>
+                                </tr>
+                            </table>
+                        </article>
+
+                    </div>
+                    <div>
+                        <aside >
+                            <h1 ><span contenteditable>Additional Notes</span></h1>
+                            <div contenteditable>
+                                <p>A finance charge of 1.5% will be made on unpaid balances after 30 days.</p>
+                            </div>
+                        </aside>
+                    </div>
+
+                </div>
+
+            </form>
+            <div align="right">
+                <input style="color: #0c4ca3" type="button" value="Print 1st Div" onclick="javascript:printDiv('printablediv')" />
+            </div>
+        </ui-view>
+    </div>
+}

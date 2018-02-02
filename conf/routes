@@ -1,0 +1,42 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+GET         /                                                @controllers.Application.index()
+POST        /validate                                         @controllers.Application.validate()
+GET         /account/getAll                                   @controllers.Application.getAll()
+GET         /logout                                           @controllers.Application.logout()
+
+#CustomerDetailsController
+GET         /customerDetail                                    controllers.CustomerDetailController.index()
+POST        /customerDetailCreate                              controllers.CustomerDetailController.create()
+GET         /invoiceNoGetAll/:invoiceNo                        controllers.CustomerDetailController.getByInvoice(invoiceNo)
+
+
+#codeGenerator
+GET         /codeGenerator                                     controllers.CodeGeneratorController.index()
+POST        /codeGeneratorCreate                               controllers.CodeGeneratorController.create()
+POST        /customerDetailDelete/:codeGenerator               controllers.CodeGeneratorController.delete(codeGenerator)
+GET         /codeGeneratorList                                 controllers.CodeGeneratorController.getAll()
+
+
+
+#invoiceFinal
+GET         /invoiceFinal                                      controllers.InvoiceFinalController.index()
+
+#RankMaster
+GET         /rankMaster                                                                      @controllers.RankMasterController.index()
+GET         /rankMasterList                                                                  @controllers.RankMasterController.getAll()
+POST        /rankMasterCreate                                                                @controllers.RankMasterController.create()
+#POST        /rankMasterUpdate                                                                @controllers.RankMasterController.update()
+#GET         /rankMasterDelete/:id                                                            @controllers.RankMasterController.delete(id)
+
+
+
+
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

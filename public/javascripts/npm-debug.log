@@ -1,0 +1,277 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'angucomplete-alt',
+1 verbose cli   '--save' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData angucomplete-alt
+8 silly fetchNamedPackageData angucomplete-alt
+9 silly mapToRegistry name angucomplete-alt
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'angucomplete-alt',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'angucomplete-alt',
+12 silly mapToRegistry   name: 'angucomplete-alt',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/angucomplete-alt
+14 verbose request uri https://registry.npmjs.org/angucomplete-alt
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 6:37:35 PM
+17 verbose request id 6c9308427ca3a307
+18 verbose etag W/"59b719e7-f3f2"
+19 verbose lastModified Mon, 11 Sep 2017 23:19:03 GMT
+20 http request GET https://registry.npmjs.org/angucomplete-alt
+21 http 304 https://registry.npmjs.org/angucomplete-alt
+22 verbose headers { date: 'Sat, 25 Nov 2017 13:07:24 GMT',
+22 verbose headers   via: '1.1 varnish',
+22 verbose headers   'cache-control': 'max-age=300',
+22 verbose headers   etag: 'W/"59b719e7-f3f2"',
+22 verbose headers   age: '0',
+22 verbose headers   connection: 'keep-alive',
+22 verbose headers   'x-served-by': 'cache-ams4438-AMS',
+22 verbose headers   'x-cache': 'HIT',
+22 verbose headers   'x-cache-hits': '1',
+22 verbose headers   'x-timer': 'S1511615244.203640,VS0,VE83',
+22 verbose headers   vary: 'Accept-Encoding, Accept' }
+23 silly get cb [ 304,
+23 silly get   { date: 'Sat, 25 Nov 2017 13:07:24 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     etag: 'W/"59b719e7-f3f2"',
+23 silly get     age: '0',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-ams4438-AMS',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1511615244.203640,VS0,VE83',
+23 silly get     vary: 'Accept-Encoding, Accept' } ]
+24 verbose etag https://registry.npmjs.org/angucomplete-alt from cache
+25 verbose get saving angucomplete-alt to C:\Users\DELL\AppData\Roaming\npm-cache\registry.npmjs.org\angucomplete-alt\.cache.json
+26 verbose correctMkdir C:\Users\DELL\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+27 silly install normalizeTree
+28 silly loadCurrentTree Finishing
+29 silly loadIdealTree Starting
+30 silly install loadIdealTree
+31 silly cloneCurrentTree Starting
+32 silly install cloneCurrentTreeToIdealTree
+33 silly cloneCurrentTree Finishing
+34 silly loadShrinkwrap Starting
+35 silly install loadShrinkwrap
+36 silly loadShrinkwrap Finishing
+37 silly loadAllDepsIntoIdealTree Starting
+38 silly install loadAllDepsIntoIdealTree
+39 silly resolveWithNewModule angucomplete-alt@3.0.0 checking installable status
+40 silly cache add args [ 'angucomplete-alt', null ]
+41 verbose cache add spec angucomplete-alt
+42 silly cache add parsed spec Result {
+42 silly cache add   raw: 'angucomplete-alt',
+42 silly cache add   scope: null,
+42 silly cache add   escapedName: 'angucomplete-alt',
+42 silly cache add   name: 'angucomplete-alt',
+42 silly cache add   rawSpec: '',
+42 silly cache add   spec: 'latest',
+42 silly cache add   type: 'tag' }
+43 silly addNamed angucomplete-alt@latest
+44 verbose addNamed "latest" is being treated as a dist-tag for angucomplete-alt
+45 info addNameTag [ 'angucomplete-alt', 'latest' ]
+46 silly mapToRegistry name angucomplete-alt
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry data Result {
+49 silly mapToRegistry   raw: 'angucomplete-alt',
+49 silly mapToRegistry   scope: null,
+49 silly mapToRegistry   escapedName: 'angucomplete-alt',
+49 silly mapToRegistry   name: 'angucomplete-alt',
+49 silly mapToRegistry   rawSpec: '',
+49 silly mapToRegistry   spec: 'latest',
+49 silly mapToRegistry   type: 'tag' }
+50 silly mapToRegistry uri https://registry.npmjs.org/angucomplete-alt
+51 verbose addNameTag registry:https://registry.npmjs.org/angucomplete-alt not in flight; fetching
+52 verbose get https://registry.npmjs.org/angucomplete-alt not expired, no request
+53 silly addNameTag next cb for angucomplete-alt with tag latest
+54 silly addNamed angucomplete-alt@3.0.0
+55 verbose addNamed "3.0.0" is a plain semver version for angucomplete-alt
+56 silly cache afterAdd angucomplete-alt@3.0.0
+57 verbose afterAdd C:\Users\DELL\AppData\Roaming\npm-cache\angucomplete-alt\3.0.0\package\package.json not in flight; writing
+58 verbose correctMkdir C:\Users\DELL\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+59 verbose afterAdd C:\Users\DELL\AppData\Roaming\npm-cache\angucomplete-alt\3.0.0\package\package.json written
+60 silly loadAllDepsIntoIdealTree Finishing
+61 silly loadIdealTree Finishing
+62 silly currentTree javascripts
+63 silly idealTree javascripts
+63 silly idealTree `-- angucomplete-alt@3.0.0
+64 silly generateActionsToTake Starting
+65 silly install generateActionsToTake
+66 silly generateActionsToTake Finishing
+67 silly diffTrees action count 1
+68 silly diffTrees add angucomplete-alt@3.0.0
+69 silly decomposeActions action count 8
+70 silly decomposeActions fetch angucomplete-alt@3.0.0
+71 silly decomposeActions extract angucomplete-alt@3.0.0
+72 silly decomposeActions test angucomplete-alt@3.0.0
+73 silly decomposeActions preinstall angucomplete-alt@3.0.0
+74 silly decomposeActions build angucomplete-alt@3.0.0
+75 silly decomposeActions install angucomplete-alt@3.0.0
+76 silly decomposeActions postinstall angucomplete-alt@3.0.0
+77 silly decomposeActions finalize angucomplete-alt@3.0.0
+78 silly runTopLevelLifecycles Starting
+79 silly executeActions Starting
+80 silly install executeActions
+81 silly doSerial global-install 0
+82 silly doParallel fetch 1
+83 verbose correctMkdir C:\Users\DELL\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+84 verbose lock using C:\Users\DELL\AppData\Roaming\npm-cache\_locks\staging-5004f0d06b348b5f.lock for E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging
+85 silly doParallel extract 1
+86 silly extract angucomplete-alt@3.0.0
+87 verbose unbuild node_modules\.staging\angucomplete-alt-c788387c
+88 silly gentlyRm E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c is being purged from base E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts
+89 verbose gentlyRm don't care about contents; nuking E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c
+90 verbose tar unpack C:\Users\DELL\AppData\Roaming\npm-cache\angucomplete-alt\3.0.0\package.tgz
+91 verbose tar unpacking to E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c
+92 silly gentlyRm E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c is being purged
+93 verbose gentlyRm don't care about contents; nuking E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c
+94 silly gunzTarPerm modes [ '777', '666' ]
+95 silly gunzTarPerm extractEntry package.json
+96 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+97 silly gunzTarPerm extractEntry .npmignore
+98 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+99 silly gunzTarPerm extractEntry README.md
+100 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+101 silly gunzTarPerm extractEntry LICENSE
+102 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+103 silly gunzTarPerm extractEntry Gruntfile.js
+104 silly gunzTarPerm modified mode [ 'Gruntfile.js', 420, 438 ]
+105 silly gunzTarPerm extractEntry angucomplete-alt.js
+106 silly gunzTarPerm modified mode [ 'angucomplete-alt.js', 420, 438 ]
+107 silly gunzTarPerm extractEntry CONTRIBUTORS.md
+108 silly gunzTarPerm modified mode [ 'CONTRIBUTORS.md', 420, 438 ]
+109 silly gunzTarPerm extractEntry .bowerrc
+110 silly gunzTarPerm modified mode [ '.bowerrc', 420, 438 ]
+111 silly gunzTarPerm extractEntry .editorconfig
+112 silly gunzTarPerm modified mode [ '.editorconfig', 420, 438 ]
+113 silly gunzTarPerm extractEntry angucomplete-alt.css
+114 silly gunzTarPerm modified mode [ 'angucomplete-alt.css', 420, 438 ]
+115 silly gunzTarPerm extractEntry .jshintrc
+116 silly gunzTarPerm modified mode [ '.jshintrc', 420, 438 ]
+117 silly gunzTarPerm extractEntry bower.json
+118 silly gunzTarPerm modified mode [ 'bower.json', 420, 438 ]
+119 silly gunzTarPerm extractEntry dist/angucomplete-alt.min.js
+120 silly gunzTarPerm modified mode [ 'dist/angucomplete-alt.min.js', 420, 438 ]
+121 silly gunzTarPerm extractEntry example/README.md
+122 silly gunzTarPerm modified mode [ 'example/README.md', 420, 438 ]
+123 silly gunzTarPerm extractEntry example/countries.json
+124 silly gunzTarPerm modified mode [ 'example/countries.json', 420, 438 ]
+125 silly gunzTarPerm extractEntry example/css/structure.css
+126 silly gunzTarPerm modified mode [ 'example/css/structure.css', 420, 438 ]
+127 silly gunzTarPerm extractEntry example/fonts/bariol/bariol.css
+128 silly gunzTarPerm modified mode [ 'example/fonts/bariol/bariol.css', 493, 511 ]
+129 silly gunzTarPerm extractEntry example/fonts/bariol/bariol_bold-demo.html
+130 silly gunzTarPerm modified mode [ 'example/fonts/bariol/bariol_bold-demo.html', 493, 511 ]
+131 silly gunzTarPerm extractEntry example/fonts/bariol/bariol_bold-webfont.eot
+132 silly gunzTarPerm modified mode [ 'example/fonts/bariol/bariol_bold-webfont.eot', 493, 511 ]
+133 silly gunzTarPerm extractEntry example/fonts/bariol/bariol_bold-webfont.svg
+134 silly gunzTarPerm modified mode [ 'example/fonts/bariol/bariol_bold-webfont.svg', 493, 511 ]
+135 silly gunzTarPerm extractEntry example/fonts/bariol/bariol_bold-webfont.ttf
+136 silly gunzTarPerm modified mode [ 'example/fonts/bariol/bariol_bold-webfont.ttf', 493, 511 ]
+137 silly gunzTarPerm extractEntry example/fonts/bariol/bariol_bold-webfont.woff
+138 silly gunzTarPerm modified mode [ 'example/fonts/bariol/bariol_bold-webfont.woff', 493, 511 ]
+139 silly gunzTarPerm extractEntry example/fonts/bariol/bariol_regular-webfont.eot
+140 silly gunzTarPerm modified mode [ 'example/fonts/bariol/bariol_regular-webfont.eot', 493, 511 ]
+141 silly gunzTarPerm extractEntry example/fonts/bariol/bariol_regular-webfont.svg
+142 silly gunzTarPerm modified mode [ 'example/fonts/bariol/bariol_regular-webfont.svg', 493, 511 ]
+143 silly gunzTarPerm extractEntry example/fonts/bariol/bariol_regular-webfont.ttf
+144 silly gunzTarPerm modified mode [ 'example/fonts/bariol/bariol_regular-webfont.ttf', 493, 511 ]
+145 silly gunzTarPerm extractEntry example/fonts/bariol/bariol_regular-webfont.woff
+146 silly gunzTarPerm modified mode [ 'example/fonts/bariol/bariol_regular-webfont.woff', 493, 511 ]
+147 silly gunzTarPerm extractEntry example/img/alanp.jpg
+148 silly gunzTarPerm modified mode [ 'example/img/alanp.jpg', 420, 438 ]
+149 silly gunzTarPerm extractEntry example/img/annie.jpg
+150 silly gunzTarPerm modified mode [ 'example/img/annie.jpg', 420, 438 ]
+151 silly gunzTarPerm extractEntry example/img/daryl.jpeg
+152 silly gunzTarPerm modified mode [ 'example/img/daryl.jpeg', 420, 438 ]
+153 silly gunzTarPerm extractEntry example/index.html
+154 silly gunzTarPerm modified mode [ 'example/index.html', 420, 438 ]
+155 silly gunzTarPerm extractEntry example/js/app.js
+156 silly gunzTarPerm modified mode [ 'example/js/app.js', 420, 438 ]
+157 silly gunzTarPerm extractEntry example/js/libs/es5-shim.min.js
+158 silly gunzTarPerm modified mode [ 'example/js/libs/es5-shim.min.js', 420, 438 ]
+159 silly gunzTarPerm extractEntry example/js/libs/json3.min.js
+160 silly gunzTarPerm modified mode [ 'example/js/libs/json3.min.js', 420, 438 ]
+161 silly gunzTarPerm extractEntry CONTRIBUTING.md
+162 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 420, 438 ]
+163 silly gunzTarPerm extractEntry test/angucomplete-alt.spec.js
+164 silly gunzTarPerm modified mode [ 'test/angucomplete-alt.spec.js', 420, 438 ]
+165 silly gunzTarPerm extractEntry test/karma.conf.js
+166 silly gunzTarPerm modified mode [ 'test/karma.conf.js', 420, 438 ]
+167 silly gentlyRm E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c\node_modules is being purged
+168 verbose gentlyRm don't care about contents; nuking E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c\node_modules
+169 silly doParallel preinstall 1
+170 silly preinstall angucomplete-alt@3.0.0 E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c
+171 info lifecycle angucomplete-alt@3.0.0~preinstall: angucomplete-alt@3.0.0
+172 silly lifecycle angucomplete-alt@3.0.0~preinstall: no script for preinstall, continuing
+173 silly doReverseSerial remove 0
+174 silly doSerial move 0
+175 silly doSerial finalize 1
+176 silly finalize E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\angucomplete-alt
+177 verbose unlock done using C:\Users\DELL\AppData\Roaming\npm-cache\_locks\staging-5004f0d06b348b5f.lock for E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging
+178 silly rollbackFailedOptional Starting
+179 silly rollbackFailedOptional Finishing
+180 silly runTopLevelLifecycles Finishing
+181 silly install printInstalled
+182 warn enoent ENOENT: no such file or directory, open 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\package.json'
+183 verbose enoent ENOENT: no such file or directory, open 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\package.json'
+183 verbose enoent This is most likely not a problem with npm itself
+183 verbose enoent and is related to npm not being able to find a file.
+184 warn javascripts No description
+185 verbose If you need help, you may report this error at:
+185 verbose     <https://github.com/npm/npm/issues>
+186 warn javascripts No repository field.
+187 verbose If you need help, you may report this error at:
+187 verbose     <https://github.com/npm/npm/issues>
+188 warn javascripts No README data
+189 verbose If you need help, you may report this error at:
+189 verbose     <https://github.com/npm/npm/issues>
+190 warn javascripts No license field.
+191 verbose If you need help, you may report this error at:
+191 verbose     <https://github.com/npm/npm/issues>
+192 verbose stack Error: EPERM: operation not permitted, rename 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c' -> 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\angucomplete-alt'
+192 verbose stack     at destStatted (C:\Program Files\nodejs\node_modules\npm\lib\install\action\finalize.js:25:7)
+192 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:264:29
+192 verbose stack     at FSReqWrap.oncomplete (fs.js:123:15)
+192 verbose stack
+192 verbose stack Error: EPERM: operation not permitted, rename 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c' -> 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\angucomplete-alt'
+192 verbose stack     at Error (native)
+193 verbose cwd E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts
+194 error Windows_NT 10.0.14393
+195 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "angucomplete-alt" "--save"
+196 error node v6.11.2
+197 error npm  v3.10.10
+198 error path E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c
+199 error code EPERM
+200 error errno -4048
+201 error syscall rename
+202 error Error: EPERM: operation not permitted, rename 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c' -> 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\angucomplete-alt'
+202 error     at destStatted (C:\Program Files\nodejs\node_modules\npm\lib\install\action\finalize.js:25:7)
+202 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:264:29
+202 error     at FSReqWrap.oncomplete (fs.js:123:15)
+202 error
+202 error Error: EPERM: operation not permitted, rename 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c' -> 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\angucomplete-alt'
+202 error     at Error (native)
+202 error  Error: EPERM: operation not permitted, rename 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c' -> 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\angucomplete-alt'
+202 error     at destStatted (C:\Program Files\nodejs\node_modules\npm\lib\install\action\finalize.js:25:7)
+202 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:264:29
+202 error     at FSReqWrap.oncomplete (fs.js:123:15)
+202 error
+202 error Error: EPERM: operation not permitted, rename 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\.staging\angucomplete-alt-c788387c' -> 'E:\WorkingProjects\RohanChande\play-java-jpa-example\public\javascripts\node_modules\angucomplete-alt'
+202 error     at Error (native)
+203 error Please try running this command again as root/Administrator.
+204 verbose exit [ -4048, true ]

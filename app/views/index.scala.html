@@ -1,0 +1,31 @@
+@(user : STPL_USER)
+
+@main("fashion-Login" ,user) {
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/loginpage.png")">
+    <script src="@routes.Assets.at("javascripts/loginPageApp.js")"></script>
+
+    <div ng-controller="LoginCtrl">
+
+        <div class="container-fluid  loginouter airoplane">
+            <div>
+                <div class="col-lg-6">
+                <div class="well">
+                   @* <figure >
+                        <img src="@routes.Assets.at("images/loginpage.png")" class="img-responsive center " >
+                    </figure>*@
+                    <form name="loginForm"  ng-submit="login(data)" >
+                        <div class="username">
+                            <input name="text" class="form-control" type="text" id="userName" ng-model="data.userName" placeholder="Vendor Code" ng-model="mobileNo">
+                        </div>
+                        <div class="password">
+                            <input name="password" class="form-control" type="password" id="password" ng-model="data.password" placeholder="Your Password" ng-model="password">
+                            <span class="glyphicon glyphicon-eye-open passwordeye" aria-hidden="true"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary logsubmit-btn" >Log in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+}

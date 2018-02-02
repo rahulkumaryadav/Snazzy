@@ -1,0 +1,45 @@
+
+body{
+    background-color: #ffffff;
+    background-image: url('../images/LocPh_787980780_LocID102479.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* invoice */
+.white_bg
+{
+    background-color:white;
+    border:1px solid #000;
+    padding:2%
+}
+
+.black
+{
+    font-family: Times New Roman;
+}
+
+h2.invoice
+{
+    font-family:Calibri ;
+    font-size: 25px;
+    text-align:center;
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.invoice_name
+{
+    font-family:Calibri ;
+    font-size: 20px;
+    text-align:left;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.address
+{
+    font-weight:normal;
+}
+/* invoice */

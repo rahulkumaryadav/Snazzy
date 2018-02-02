@@ -1,0 +1,64 @@
+@(title: String , user : STPL_USER)(content: Html)
+<!DOCTYPE html>
+<html>
+    <head>
+     @*   <title>@title</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <script src="@routes.Assets.at("javascripts/angular.min.js")"></script>*@
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/custom.css")">
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/ui-grid-stable.css")">
+    <script src="@routes.Assets.at("javascripts/angular.min.js")"></script>
+    <script src="@routes.Assets.at("javascripts/angular-ui-router.js")"></script>
+    <script src="@routes.Assets.at("javascripts/jquery-2.2.0.min.js")"></script>
+    <script src="@routes.Assets.at("javascripts/ui-grid-stable.js")"></script>
+    <script src="@routes.Assets.at("javascripts/angucomplete.js")"></script>
+@*
+    <script src="@routes.Assets.at("javascripts/dirPagination.js")"></script>
+*@
+    <script src="@routes.Assets.at("javascripts/bs-table-master/source/bs-table.min.js")"></script>
+
+
+
+
+    <link type="text/css" href="/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="/javascripts/bs-table.min.js"></script>
+
+
+    </head>
+    <body ng-app="mainApp">
+        @if(user != null){
+
+            <div class="container-fluid topnav-outer">
+                <div class="navbar navbar-inverse navbar-default topnav">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/" style="padding-top: 4px">
+                            <img src="/assets/images/Reservation-Form.png" class="img-responsive">
+                        </a>
+                        <ul class="nav navbar-nav">
+                            <li class=""><a href="/">Home</a></li>
+                            <li class=""><a href="/passengerDetails#/create">Register Passenger</a></li>
+                            <li class=""><a href="/passengerDetails#/list">Passengers List & Update PNR</a></li>
+                            <li class=""><a href="/importExcel#/create">Import Excel</a></li>
+                            <li class=""><a href="/smsEmailSetup#/create">Email/SMS Setup</a></li>
+                        </ul>
+                    </div>
+                    <ul class="pull-right list-unstyled tabmargin" >
+                        <li> <a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        }
+        @content
+    </body>
+</html>
